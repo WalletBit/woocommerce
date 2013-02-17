@@ -309,8 +309,8 @@ function woocommerce_walletbit_init()
 							else
 							{
 								// Validate Amount
-								$amount = number_format($_POST['amount'] * $_POST['rate'], 2, '.', '');
-								$total = number_format($order->get_total(), 2, '.', '');
+								$amount = round(number_format($_POST['amount'] * $_POST['rate'], 2, '.', ''));
+								$total = round(number_format($order->get_total(), 2, '.', ''));
 
 								if ($amount >= $total)
 								{
